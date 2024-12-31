@@ -1,5 +1,5 @@
-const { nanoid } = require("nanoid");
-const { URL } = require("../models/url");
+import { nanoid } from "nanoid";
+import { URL } from "../models/url.js";
 
 async function handleGenerateUrl(req, res) {
   const body = req.body;
@@ -10,4 +10,4 @@ async function handleGenerateUrl(req, res) {
   return res.status(201).json({ id: shortId }); //201: Created
 }
 
-module.exports = { handleGenerateUrl };
+export { handleGenerateUrl };

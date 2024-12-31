@@ -1,10 +1,11 @@
 {
   "name": "shortly",
   "version": "1.0.0",
-  "description": "URL Shortner",
+  "description": "URL Shortener",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": ""
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
