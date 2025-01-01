@@ -10,7 +10,7 @@ app.use(express.json());
 
 const PORT = 6000;
 
-app.use("/", urlRoute);
+app.use("/url", urlRoute);
 
 console.log("MONGO_URL:", process.env.MONGO_URL); // This should output the MongoDB connection string
 mongoose.connect(process.env.MONGO_URL).then(() => {
