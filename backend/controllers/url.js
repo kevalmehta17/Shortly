@@ -6,6 +6,7 @@ import validator from "validator";
 function isValidUrl(url) {
   return validator.isURL(url, { require_protocol: true });
 }
+
 async function handleGenerateUrl(req, res) {
   const body = req.body;
 
@@ -19,6 +20,7 @@ async function handleGenerateUrl(req, res) {
     return res.status(400).json({ message: "Invalid URL format" });
   }
 
+  //If URL and body is right then generate shortId
   const shortId = nanoid(8);
 
   try {
