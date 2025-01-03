@@ -18,8 +18,8 @@ app.get("/:shortId", async (req, res) => {
   try {
     const entry = await URL.findOneAndUpdate(
       { shortId },
-      { $push: { visiteHistory: { timestamp: Date.now() } } },
-      { new: true }
+      { $push: { visitHistory: { timestamp: Date.now() } } },
+      { new: true } // Return the updated document
     );
     if (!entry) {
       return res.status(404).json({ message: "Short URL not found" });

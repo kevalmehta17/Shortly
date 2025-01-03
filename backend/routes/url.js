@@ -1,7 +1,9 @@
 import { Router } from "express";
-import { handleGenerateUrl } from "../controllers/url.js";
+import { handleGenerateUrl, handleGetAnalytics } from "../controllers/url.js";
 const router = Router();
 
 router.post("/", handleGenerateUrl);
+
+router.get("/analytics/:shortId ", handleGetAnalytics);
 
 export default router;
